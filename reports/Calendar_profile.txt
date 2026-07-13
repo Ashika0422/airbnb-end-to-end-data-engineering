@@ -1,0 +1,38 @@
+Calendar
+============================================================
+
+Shape
+(11152576, 5)
+
+Data Types
+listing_id        int64
+date                str
+available           str
+minimum_nights    int64
+maximum_nights    int64
+dtype: object
+
+Missing Values
+listing_id        0
+date              0
+available         0
+minimum_nights    0
+maximum_nights    0
+dtype: int64
+
+Duplicate Rows
+0
+
+Summary Statistics
+          listing_id        date available  minimum_nights  maximum_nights
+count   1.115258e+07    11152576  11152576    1.115258e+07    1.115258e+07
+unique           NaN         374         2             NaN             NaN
+top              NaN  2026-06-23         t             NaN             NaN
+freq             NaN       30555   5707787             NaN             NaN
+mean    6.252407e+17         NaN       NaN    2.752926e+01    1.003804e+06
+std     6.181998e+17         NaN       NaN    3.430474e+01    4.640444e+07
+min     2.539000e+03         NaN       NaN    1.000000e+00    1.000000e+00
+25%     3.043555e+07         NaN       NaN    3.000000e+01    1.800000e+02
+50%     6.700833e+17         NaN       NaN    3.000000e+01    3.650000e+02
+75%     1.164527e+18         NaN       NaN    3.000000e+01    1.125000e+03
+max     1.707075e+18         NaN       NaN    1.124000e+03    2.147484e+09

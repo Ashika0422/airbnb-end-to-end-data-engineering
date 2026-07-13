@@ -1,0 +1,19 @@
+# Virtual environment
+.venv/
+venv/
+
+# Raw datasets
+data/raw/
+
+# Cleaned/generated datasets
+data/cleaned/
+
+# Database (can be recreated)
+data/airbnb.db
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/

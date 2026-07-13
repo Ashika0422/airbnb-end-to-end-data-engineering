@@ -1,0 +1,52 @@
+Listings
+============================================================
+
+Shape
+(30259, 90)
+
+Data Types
+id                                                int64
+listing_url                                         str
+scrape_id                                         int64
+last_scraped                                        str
+source                                              str
+                                                 ...   
+calculated_host_listings_count                    int64
+calculated_host_listings_count_entire_homes       int64
+calculated_host_listings_count_private_rooms      int64
+calculated_host_listings_count_shared_rooms       int64
+reviews_per_month                               float64
+Length: 90, dtype: object
+
+Missing Values
+id                                                 0
+listing_url                                        0
+scrape_id                                          0
+last_scraped                                       0
+source                                             0
+                                                ... 
+calculated_host_listings_count                     0
+calculated_host_listings_count_entire_homes        0
+calculated_host_listings_count_private_rooms       0
+calculated_host_listings_count_shared_rooms        0
+reviews_per_month                               8559
+Length: 90, dtype: int64
+
+Duplicate Rows
+0
+
+Summary Statistics
+                  id  ... reviews_per_month
+count   3.025900e+04  ...      21700.000000
+unique           NaN  ...               NaN
+top              NaN  ...               NaN
+freq             NaN  ...               NaN
+mean    6.172513e+17  ...          0.846505
+std     6.155147e+17  ...          1.847935
+min     2.539000e+03  ...          0.010000
+25%     3.038760e+07  ...          0.090000
+50%     6.608782e+17  ...          0.270000
+75%     1.160901e+18  ...          0.962500
+max     1.707075e+18  ...        115.630000
+
+[11 rows x 90 columns]

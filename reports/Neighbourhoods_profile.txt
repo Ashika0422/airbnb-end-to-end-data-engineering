@@ -1,0 +1,25 @@
+Neighbourhoods
+============================================================
+
+Shape
+(230, 2)
+
+Data Types
+neighbourhood_group    str
+neighbourhood          str
+dtype: object
+
+Missing Values
+neighbourhood_group    0
+neighbourhood          0
+dtype: int64
+
+Duplicate Rows
+0
+
+Summary Statistics
+       neighbourhood_group neighbourhood
+count                  230           230
+unique                   5           230
+top                 Queens      Allerton
+freq                    53             1

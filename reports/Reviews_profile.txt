@@ -1,0 +1,40 @@
+Reviews
+============================================================
+
+Shape
+(990170, 6)
+
+Data Types
+listing_id       int64
+id               int64
+date               str
+reviewer_id      int64
+reviewer_name      str
+comments           str
+dtype: object
+
+Missing Values
+listing_id         0
+id                 0
+date               0
+reviewer_id        0
+reviewer_name      3
+comments         272
+dtype: int64
+
+Duplicate Rows
+0
+
+Summary Statistics
+          listing_id            id        date   reviewer_id reviewer_name comments
+count   9.901700e+05  9.901700e+05      990170  9.901700e+05        990167   989898
+unique           NaN           NaN        5833           NaN        125280   948851
+top              NaN           NaN  2023-09-04           NaN         David        .
+freq             NaN           NaN        1060           NaN          7010     1295
+mean    2.722384e+17  6.896390e+17         NaN  8.222543e+14           NaN      NaN
+std     4.451970e+17  5.925304e+17         NaN  3.714448e+16           NaN      NaN
+min     2.539000e+03  3.149000e+03         NaN  1.400000e+01           NaN      NaN
+25%     1.226760e+07  5.032227e+08         NaN  3.546830e+07           NaN      NaN
+50%     3.418180e+07  7.296432e+17         NaN  1.219115e+08           NaN      NaN
+75%     6.522797e+17  1.221038e+18         NaN  2.979384e+08           NaN      NaN
+max     1.700185e+18  1.713974e+18         NaN  1.705312e+18           NaN      NaN
