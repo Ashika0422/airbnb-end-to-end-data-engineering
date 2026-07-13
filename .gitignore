@@ -9,3 +9,4 @@ __pycache__/
 # VS Code
 .vscode/models/airbnb_price_prediction.pkl
 models/airbnb_price_prediction.pkl
+models/airbnb_price_prediction.pkl
