@@ -37,8 +37,12 @@ df["price_per_person"] = (
 current_year = pd.Timestamp.now().year
 
 df["host_experience"] = (
-    current_year -
-    df["host_since"].dt.year
+    current_year - df["host_since"].dt.year
+)
+
+# Replace missing values with the median
+df["host_experience"] = df["host_experience"].fillna(
+    df["host_experience"].median()
 )
 
 df["review_year"] = (
