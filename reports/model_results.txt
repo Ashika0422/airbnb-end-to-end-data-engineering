@@ -1,0 +1,13 @@
+
+Random Forest Regressor
+
+Dataset Size : 21515
+
+Features Used :
+['accommodates', 'bedrooms', 'beds', 'availability_365', 'review_scores_rating', 'number_of_reviews', 'host_experience']
+
+MAE : 171.19
+
+RMSE : 482.25
+
+R² Score : 0.1683
