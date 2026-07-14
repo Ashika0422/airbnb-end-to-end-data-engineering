@@ -1,0 +1,149 @@
+/* ===============================
+AIRBNB MARKET INTELLIGENCE THEME
+================================ */
+
+body{
+    font-family: "Segoe UI", sans-serif;
+}
+
+.stApp{
+    background:#F7F7F7;
+}
+
+/* Hide Streamlit */
+
+#MainMenu{
+    visibility:hidden;
+}
+
+header{
+    visibility:hidden;
+}
+
+footer{
+    visibility:hidden;
+}
+
+/* ===============================
+HEADER
+================================ */
+
+.hero{
+
+    background:linear-gradient(90deg,#FF5A5F,#FF385C);
+
+    padding:30px;
+
+    border-radius:18px;
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    margin-bottom:10px;
+
+    font-size:40px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+/* ===============================
+CARDS
+================================ */
+
+.metric-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0px 5px 20px rgba(0,0,0,.08);
+
+    text-align:center;
+
+    transition:0.3s;
+
+}
+
+.metric-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.metric-value{
+
+    font-size:38px;
+
+    font-weight:bold;
+
+    color:#FF5A5F;
+
+}
+
+.metric-title{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+/* ===============================
+SECTION
+================================ */
+
+.section-title{
+
+    color:#484848;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    margin-top:15px;
+
+}
+
+/* ===============================
+SIDEBAR
+================================ */
+
+section[data-testid="stSidebar"]{
+
+    background:rgb(0, 0, 0);
+
+}
+
+/* ===============================
+BUTTON
+================================ */
+
+.stButton>button{
+
+    background:#FF5A5F;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+}
+
+.stButton>button:hover{
+
+    background:#E84147;
+
+}
