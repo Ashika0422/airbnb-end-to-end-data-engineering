@@ -1,24 +1,20 @@
 import os
-import pandas as pd
+
 import matplotlib.pyplot as plt
+import pandas as pd
 import seaborn as sns
 
+from config import *
+from logger import logger
+
 sns.set_style("whitegrid")
-
-# -----------------------------
-# Paths
-# -----------------------------
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-CLEAN_DATA = os.path.join(BASE_DIR, "data", "cleaned")
-FIGURES = os.path.join(BASE_DIR, "reports", "figures")
 
 os.makedirs(FIGURES, exist_ok=True)
 
 # -----------------------------
 # Load Dataset
 # -----------------------------
-df = pd.read_csv(os.path.join(CLEAN_DATA, "listings_clean.csv"))
+df = pd.read_csv(os.path.join(CLEANED_DATA, "listings_clean.csv"))
 
 plt.figure(figsize=(10,6))
 
@@ -186,3 +182,5 @@ plt.tight_layout()
 
 plt.savefig(os.path.join(FIGURES,"estimated_revenue.png"))
 plt.show()
+
+logger.info("Analysis figures saved to %s", FIGURES)

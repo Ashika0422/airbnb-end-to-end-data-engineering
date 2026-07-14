@@ -1,16 +1,12 @@
 import os
+
 import pandas as pd
 
-# -----------------------------
-# Project Paths
-# -----------------------------
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from config import RAW_DATA, REPORTS
+from logger import logger
 
-RAW_DATA = os.path.join(BASE_DIR, "data", "raw")
+os.makedirs(REPORTS, exist_ok=True)
 
-# -----------------------------
-# File Names
-# -----------------------------
 FILES = {
     "Listings": "listings.csv",
     "Calendar": "calendar.csv",
@@ -22,12 +18,12 @@ def load_dataset(file_name):
     path = os.path.join(RAW_DATA, file_name)
 
     if not os.path.exists(path):
-        print(f"[ERROR] {file_name} not found.")
+        logger.error("%s not found.", file_name)
         return None
 
     df = pd.read_csv(path)
 
-    print(f"[SUCCESS] Loaded {file_name}")
+    logger.info("Loaded %s", file_name)
     return df
 
 datasets = {}
@@ -35,21 +31,21 @@ datasets = {}
 for name, file in FILES.items():
     datasets[name] = load_dataset(file)
 
-print("\n==============================")
-print("DATASET SUMMARY")
-print("==============================")
+logger.info("==============================")
+logger.info("DATASET SUMMARY")
+logger.info("==============================")
 
 for name, df in datasets.items():
 
     if df is not None:
-        print(f"\n{name}")
-        print("-" * 30)
-        print(f"Rows    : {df.shape[0]}")
-        print(f"Columns : {df.shape[1]}")
+        logger.info("%s", name)
+        logger.info("%s", "-" * 30)
+        logger.info("Rows    : %s", df.shape[0])
+        logger.info("Columns : %s", df.shape[1])
 
 def profile_dataset(name, df):
 
-    report_path = os.path.join(BASE_DIR, "reports", f"{name}_profile.txt")
+    report_path = os.path.join(REPORTS, f"{name}_profile.txt")
 
     with open(report_path, "w", encoding="utf-8") as file:
 
@@ -75,7 +71,7 @@ def profile_dataset(name, df):
         file.write("Summary Statistics\n")
         file.write(str(df.describe(include="all")))
 
-    print(f"[SUCCESS] Profile saved for {name}")
+    logger.info("Profile saved for %s", name)
 
 for name, df in datasets.items():
 
