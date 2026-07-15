@@ -681,34 +681,6 @@ Possible future enhancements include:
 - LLM-Based Market Insights
 - REST API Integration
 
-# 🤝 Contributing
-
-Contributions are welcome.
-
-If you would like to improve this project:
-
-1. Fork the repository
-
-2. Create a feature branch
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit changes
-
-```bash
-git commit -m "Add feature"
-```
-
-4. Push changes
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request
-
 # 📜 License
 
 This project is released under the MIT License.
