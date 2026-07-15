@@ -295,47 +295,33 @@ if {"latitude", "longitude"}.issubset(df.columns):
     st.subheader("🗺 Airbnb Listings Map")
 
     map_df = df[
-        [
-            "latitude",
-            "longitude",
-            "price",
-            "room_type"
-        ]
+        ["latitude", "longitude", "price", "room_type"]
     ].dropna()
 
+    red_blue_scale = [
+        [0.00, "#d73027"],
+        [0.25, "#fc8d59"],
+        [0.50, "#fee090"],
+        [0.75, "#91bfdb"],
+        [1.00, "#4575b4"],
+    ]
+
     fig = px.scatter_mapbox(
-
         map_df,
-
         lat="latitude",
-
         lon="longitude",
-
         color="price",
-
         size="price",
-
-        hover_data=["room_type"],
-
+        hover_data=["room_type", "price"],
         zoom=10,
-
         height=600,
-
-        color_continuous_scale="Reds"
-
+        color_continuous_scale=red_blue_scale,
     )
 
     fig.update_layout(
-
         mapbox_style="carto-positron",
-
-        margin=dict(
-            l=0,
-            r=0,
-            t=0,
-            b=0
-        )
-
+        coloraxis_colorbar=dict(title="Price"),
+        margin=dict(l=0, r=0, t=0, b=0),
     )
 
     st.plotly_chart(fig, use_container_width=True)

@@ -1,24 +1,24 @@
-from pathlib import Path
-
+import sqlite3
 import pandas as pd
-import streamlit as st
+import os
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-@st.cache_data
+DB_PATH = os.path.join(
+    BASE_DIR,
+    "database",
+    "airbnb.db"
+)
+
 def load_data():
 
-    base_dir = Path(__file__).resolve().parents[2]
+    conn = sqlite3.connect(DB_PATH)
 
-    data_path = (
-        base_dir
-        / "data"
-        / "transformed"
-        / "listings_transformed.csv"
+    df = pd.read_sql(
+        "SELECT * FROM fact_listings",
+        conn
     )
 
-    if not data_path.exists():
-        return pd.DataFrame()
-
-    df = pd.read_csv(data_path)
+    conn.close()
 
     return df
