@@ -1,16 +1,25 @@
 import sqlite3
 import pandas as pd
-import os
+from pathlib import Path
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# ==========================================
+# PROJECT ROOT
+# ==========================================
 
-DB_PATH = os.path.join(
-    BASE_DIR,
-    "database",
-    "airbnb.db"
-)
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+DB_PATH = BASE_DIR / "database" / "airbnb.db"
+
+# ==========================================
+# LOAD DATA
+# ==========================================
 
 def load_data():
+
+    if not DB_PATH.exists():
+        raise FileNotFoundError(
+            f"Database not found:\n{DB_PATH}"
+        )
 
     conn = sqlite3.connect(DB_PATH)
 
