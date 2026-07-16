@@ -98,13 +98,13 @@ Professional Streamlit dashboard including:
 - Downloadable Reports
 
   <p align="center">
-  <img src="assets/dashboard1.png" alt="Airbnb Dashboard" width="900">
+  <img src="dashboard/assets/dashboard1.png" alt="Airbnb Dashboard" width="900">
   </p>
   <p align="center">
-  <img src="assets/dashboard2.png" alt="Airbnb Dashboard" width="900">
+  <img src="dashboard/assets/dashboard2.png" alt="Airbnb Dashboard" width="900">
   </p>
   <p align="center">
-  <img src="assets/dashboard3.png" alt="Airbnb Dashboard" width="900">
+  <img src="dashboard/assets/dashboard3.png" alt="Airbnb Dashboard" width="900">
   </p>
 
 # 🏗️ System Architecture
@@ -317,7 +317,7 @@ Interactive Dashboard
 - Dashboard visualization
 
   <p align="center">
-  <img src="assets/pipeline.png" alt="Airbnb Dashboard" width="900">
+  <img src="dashboard/assets/pipeline.png" alt="Airbnb Dashboard" width="900">
   </p>
 
 # 🗄 Data Warehouse Design
