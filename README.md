@@ -104,7 +104,7 @@ Professional Streamlit dashboard including:
   <img src="dashboard/assets/dashboard2.png" alt="Airbnb Dashboard" width="900">
   </p>
   <p align="center">
-  <img src="dashboard/assets/dashboard3.png" alt="Airbnb Dashboard" width="900">
+  <img src="dashboard/assets/dashbaord3.png" alt="Airbnb Dashboard" width="900">
   </p>
 
 # 🏗️ System Architecture
